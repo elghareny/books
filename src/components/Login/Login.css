@@ -1,0 +1,25 @@
+.log::before {
+    content: '';
+    position: absolute;
+    width: 2000px;
+    height: 2000px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #4481eb, #04befe);
+    top: -10%;
+    right: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 6;
+    -webkit-transition: 1.8 ease-in-out;
+    -moz-transition: 1.8 ease-in-out;
+    -ms-transition: 1.8 ease-in-out;
+    -o-transition: 1.8 ease-in-out;
+    transition: 1.8 ease-in-out;
+}

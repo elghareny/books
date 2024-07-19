@@ -1,0 +1,365 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --linear-grad: linear-gradient(to right, #141E30, #243B55);
+    --grad-clr1: #141E30;
+    --grad-clr2: #243B55;
+}
+
+body {
+    height: 100vh;
+    background: #f6f5f7;
+    display: grid;
+    place-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background-color: #fff;
+    box-shadow: 25px 30px 55px #5557;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.form-container {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    padding: 0 40px;
+    -webkit-transition: all .5 ease-in-out;
+    -moz-transition: all .5 ease-in-out;
+    -ms-transition: all .5 ease-in-out;
+    -o-transition: all .5 ease-in-out;
+    transition: all .5 ease-in-out;
+}
+
+.sign-up-container {
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.sign-in-container {
+    z-index: 2;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+h1 {
+    color: var(--grad-clr1);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+span {
+    font-size: 12px;
+}
+
+.infield {
+    position: relative;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.pass {
+    display: flex;
+}
+
+.pass .icon {
+    position: absolute;
+    cursor: pointer;
+    left: 90%;
+    color: var(--grad-clr1);
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+}
+
+.selector {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+}
+
+label {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: var(--linear-grad);
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+input:focus~label {
+    width: 100%;
+}
+
+button {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--grad-clr1);
+    background: var(--grad-clr2);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-container button {
+    margin-top: 17px;
+    -webkit-transition: 80ms ease-in;
+    -moz-transition: 80ms ease-in;
+    -ms-transition: 80ms ease-in;
+    -o-transition: 80ms ease-in;
+    transition: 80ms ease-in;
+}
+
+.form-container button:hover {
+    background: white;
+    color: var(--grad-clr1);
+}
+
+.overlay-container {
+    position: absolute;
+    left: 60%;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    z-index: 9;
+}
+
+#overlayBtn {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 325px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 143.67px;
+    height: 40px;
+    border: 1px solid #fff;
+    background: transparent;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.overlay {
+    position: relative;
+    background: var(--linear-grad);
+    color: #fff;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    -webkit-transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    -ms-transition: transform .5s ease-in-out;
+    -o-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    -webkit-transition: .5 ease-in-out;
+    -moz-transition: .5 ease-in-out;
+    -ms-transition: .5 ease-in-out;
+    -o-transition: .5 ease-in-out;
+    transition: .5 ease-in-out;
+}
+
+.overlay-left {
+    right: 60%;
+    -webkit-transform: translateX(-12%);
+    -moz-transform: translateX(-12%);
+    -ms-transform: translateX(-12%);
+    -o-transform: translateX(-12%);
+    transform: translateX(-12%);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.overlay-right {
+    right: 0%;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.overlay-panel h1 {
+    color: #fff;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: .5px;
+    padding: 25px 0 35px;
+}
+
+.overlay-panel button {
+    border: none;
+    background-color: transparent;
+}
+
+.right-panel-active .overlay-container {
+    -webkit-transform: translateX(-150%);
+    -moz-transform: translateX(-150%);
+    -ms-transform: translateX(-150%);
+    -o-transform: translateX(-150%);
+    transform: translateX(-150%);
+}
+
+.right-panel-active .overlay {
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+.right-panel-active .overlay-left {
+    -webkit-transform: translateX(25%);
+    -moz-transform: translateX(25%);
+    -ms-transform: translateX(25%);
+    -o-transform: translateX(25%);
+    transform: translateX(25%);
+}
+
+.right-panel-active .overlay-right {
+    -webkit-transform: translateX(35%);
+    -moz-transform: translateX(35%);
+    -ms-transform: translateX(35%);
+    -o-transform: translateX(35%);
+    transform: translateX(35%);
+}
+
+.right-panel-active .sign-in-container {
+    -webkit-transform: translateX(20%);
+    -moz-transform: translateX(20%);
+    -ms-transform: translateX(20%);
+    -o-transform: translateX(20%);
+    transform: translateX(20%);
+    opacity: 0;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.right-panel-active .sign-up-container {
+    -webkit-transform: translateX(66.5%);
+    -moz-transform: translateX(66.5%);
+    -ms-transform: translateX(66.5%);
+    -o-transform: translateX(66.5%);
+    transform: translateX(66.5%);
+    opacity: 1;
+    z-index: 5;
+    -webkit-animation: show .5s;
+    animation: show .5s;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+@keyframes show {
+    0%,
+    50% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50.1%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
